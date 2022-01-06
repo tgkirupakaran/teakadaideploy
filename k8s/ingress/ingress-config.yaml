@@ -14,7 +14,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: client-cluster-ip-service
+                name: custfe-cluster-ip-service
                 port:
                   number: 80
 
