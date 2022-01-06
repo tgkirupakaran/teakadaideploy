@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custfe-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: custfe
+  template:
+    metadata:
+      labels:
+        component: custfe
+    spec:
+      containers:
+        - name: teakadaicustomerfe
+          image:  teakadaiacr.azurecr.io/customer-portal-fe
+          secret:
+            secretName: 
+          ports:
+            - containerPort: 3000
