@@ -16,6 +16,6 @@ spec:
         - name: teakadaicustomerfe
           image:  teakadaiacr.azurecr.io/customer-portal-fe
           secret:
-            secretName: 
+            secretName: tekadai-acr-secret
           ports:
-            - containerPort: 3000
+            - containerPort: 80
