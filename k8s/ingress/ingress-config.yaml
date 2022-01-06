@@ -1,4 +1,4 @@
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: app-ingress
@@ -8,7 +8,9 @@ spec:
   rules:
   - http:
       paths:
-      - path: /app1
+      - path: /
         backend:
-          serviceName: custfe-cluster-ip-service
-          servicePort: 80
+          service: 
+            name: custfe-cluster-ip-service
+            port: 
+              number: 80
