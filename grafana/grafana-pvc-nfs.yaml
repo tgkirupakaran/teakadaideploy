@@ -9,7 +9,7 @@ spec:
   storageClassName: azure-file-sc
   accessModes:
     - ReadWriteMany
-  volumeName: pv-azfs-grafana
+  # volumeName: pv-azfs-grafana
   resources:
     requests:
       storage: 1Gi

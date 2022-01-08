@@ -10,7 +10,7 @@ spec:
   storageClassName: azure-file-sc
   accessModes:
     - ReadWriteMany
-  volumeName: pv-azfs-prometheus
+  # volumeName: pv-azfs-prometheus
   resources:
     requests:
       storage: 1Gi
