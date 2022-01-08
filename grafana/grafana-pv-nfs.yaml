@@ -1,16 +1,24 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-nfs-storage
+  name: pv-azfs-grafana
   namespace: monitoring
   labels:
     type: nfs
 spec:
-  storageClassName: managed-nfs
+  storageClassName: azure-file-grafana-sc
   capacity:
     storage: 1Gi
   accessModes:
     - ReadWriteMany
-  nfs:
-    server: 192.168.31.174
-    path: "/mnt/nfs/grafana-storage"
+  azureFile:
+    secretName: azure-secret
+    shareName: grafana
+    readOnly: false
+  mountOptions:
+  - dir_mode=0755
+  - file_mode=0755
+  - uid=1000
+  - gid=1000
+  - mfsymlinks
+  - nobrl

@@ -2,13 +2,13 @@
 apiVersion: v1
 kind: PersistentVolume
 metadata:
-  name: pv-azfs-data
+  name: pv-azfs-prometheus
   namespace: monitoring
   labels:
     type: azurefs
     app: prometheus-deployment
 spec:
-  storageClassName: azure-file-sc
+  storageClassName: azure-file-prometheus-sc
   capacity:
     storage: 1Gi
   accessModes:
