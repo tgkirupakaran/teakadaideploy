@@ -7,9 +7,10 @@ metadata:
   labels:
     app: prometheus-deployment
 spec:
-  storageClassName: azure-file-prometheus-sc
+  storageClassName: azure-file-sc
   accessModes:
     - ReadWriteMany
+  volumeName: pv-azfs-prometheus
   resources:
     requests:
       storage: 1Gi

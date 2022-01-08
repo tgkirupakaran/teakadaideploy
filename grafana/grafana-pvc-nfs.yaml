@@ -6,9 +6,10 @@ metadata:
   labels:
     app: grafana
 spec:
-  storageClassName: azure-file-grafana-sc
+  storageClassName: azure-file-sc
   accessModes:
     - ReadWriteMany
+  volumeName: pv-azfs-grafana
   resources:
     requests:
       storage: 1Gi

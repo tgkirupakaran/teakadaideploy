@@ -8,7 +8,7 @@ metadata:
     type: azurefs
     app: prometheus-deployment
 spec:
-  storageClassName: azure-file-prometheus-sc
+  storageClassName: azure-file-sc
   capacity:
     storage: 1Gi
   accessModes:

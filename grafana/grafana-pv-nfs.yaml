@@ -6,7 +6,7 @@ metadata:
   labels:
     type: nfs
 spec:
-  storageClassName: azure-file-grafana-sc
+  storageClassName: azure-file-sc
   capacity:
     storage: 1Gi
   accessModes:
