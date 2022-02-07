@@ -12,14 +12,14 @@ spec:
         paths:
           - path: /?(.*)
             pathType: Prefix
-            frontend:
+            backend:
               service:
                 name: custfe-cluster-ip-service
                 port:
                   number: 80
           - path: /api/(.*)
             pathType: Prefix
-            middle:
+            backend:
               service:
                 name: custapi-cluster-ip-service
                 port:
