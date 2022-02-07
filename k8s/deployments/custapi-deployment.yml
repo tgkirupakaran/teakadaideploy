@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: custsapi-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: custapi
+  template:
+    metadata:
+      labels:
+        component: custapi
+    spec:
+      containers:
+        - name: teakadaicustomerfe
+          image:  teakadaiacr.azurecr.io/customer-api
+          ports:
+            - containerPort: 8080
+      imagePullSecrets:
+        - name: tekadai-acr-secret
