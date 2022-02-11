@@ -10,14 +10,14 @@ spec:
   rules:
     - http:
         paths:
-          - path: /?(.*)
+          - path: /
             pathType: Prefix
             backend:
               service:
                 name: custfe-cluster-ip-service
                 port:
                   number: 80
-          - path: /api
+          - path: /api/(.*)
             pathType: Prefix
             backend:
               service:
