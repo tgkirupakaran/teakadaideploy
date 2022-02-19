@@ -23,4 +23,4 @@ spec:
               service:
                 name: custapi-cluster-ip-service
                 port:
-                  number: 80
+                  number: 443
