@@ -7,5 +7,5 @@ spec:
   selector:
     component: custapi
   ports:
-    - port: 80
-      targetPort: 80
+    - port: 443
+      targetPort: 443
