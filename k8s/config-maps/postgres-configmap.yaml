@@ -5,6 +5,6 @@ metadata:
   labels:
     app: postgres
 data:
-  POSTGRES_DB: restaurantdb
+  POSTGRES_DB: teakadaidb
   POSTGRES_USER: admin
   POSTGRES_PASSWORD: admin123
