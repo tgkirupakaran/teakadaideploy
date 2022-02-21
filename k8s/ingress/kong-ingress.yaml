@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: global-ingress
+  namespace: namespace
+  annotations:
+    konghq.com/strip-path: "true"
+spec:
+  ingressClassName: kong
+  rules:
+  - http:
+      paths:
+      - path: /portal
+        pathType: Prefix
+        backend:
+          service:
+            name: custfe-cluster-ip-service
+            port:
+              number: 80
+      - path: /service
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
