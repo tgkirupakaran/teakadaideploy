@@ -17,7 +17,7 @@ spec:
             name: custfe-cluster-ip-service
             port:
               number: 80
-      - path: /service
+      - path: /api
         pathType: Prefix
         backend:
           service:
