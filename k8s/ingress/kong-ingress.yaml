@@ -24,3 +24,17 @@ spec:
             name: custapi-cluster-ip-service
             port:
               number: 80
+      - path: /docs
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
+      - path: /api-docs
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
