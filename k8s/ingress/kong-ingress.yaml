@@ -2,7 +2,7 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: global-ingress
-  namespace: parivattam
+  namespace: ingress-kong
 #   annotations:
 #     konghq.com/strip-path: "true"
 spec:
@@ -32,6 +32,34 @@ spec:
             port:
               number: 80
       - path: /api-docs
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
+      - path: /monitoring
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
+      - path: /monitoring/ui
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
+      - path: /monitoring/stats
+        pathType: Prefix
+        backend:
+          service:
+            name: custapi-cluster-ip-service
+            port:
+              number: 80
+      - path: /monitoring/metrics
         pathType: Prefix
         backend:
           service:
