@@ -66,3 +66,4 @@ spec:
             name: custapi-cluster-ip-service
             port:
               number: 80
+
