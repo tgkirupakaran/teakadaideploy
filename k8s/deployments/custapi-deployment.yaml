@@ -16,7 +16,7 @@ spec:
         - name: app: teakadai-api
           image:  teakadaiacr.azurecr.io/customer-api
           ports:
-          - name: web
-            containerPort: 80
+            - name: web
+              containerPort: 80
       imagePullSecrets:
         - name: tekadai-acr-secret
