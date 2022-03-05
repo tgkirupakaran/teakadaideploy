@@ -16,7 +16,7 @@ spec:
         prometheus.io/path: 'monitoring/metrics'
     spec:
       containers:
-        - name: teakadaicustomerfe
+        - name: teakadaiapi
           image:  teakadaiacr.azurecr.io/customer-api
           ports:
             - containerPort: 8080
