@@ -1,0 +1,15 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: custapi-cluster-ip-service
+  namespace: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: custapi-cluster-ip-service
+  endpoints:
+  - port: 80
+    path: /monitoring/metrics
+  namespaceSelector:
+    matchNames:
+    - parivattam
