@@ -11,9 +11,6 @@ spec:
     metadata:
       labels:
         component: custapi
-      annotations:
-        prometheus.io/scrape: "true"
-        prometheus.io/path: 'monitoring/metrics'
     spec:
       containers:
         - name: teakadaiapi
