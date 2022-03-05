@@ -1,14 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: custapi-cluster-ip-service
+  name: teakadai-api
   labels:
-    app: custapi-cluster-ip-service
+    app: teakadai-api
 spec:
   type: ClusterIP
   selector:
-    component: custapi
+    app: teakadai-api
   ports:
-    - name: httpport
-      port: 80
-      targetPort: 80
+  - name: web
+    port: 80
+
