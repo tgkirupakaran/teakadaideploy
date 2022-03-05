@@ -1,15 +1,13 @@
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
-  name: custapi-cluster-ip-service
-  namespace: prometheus
+  name: teakadai-api
+  labels:
+    team: restapi
 spec:
   selector:
     matchLabels:
-      app: custapi-cluster-ip-service
+      app: teakadai-api
   endpoints:
-  - port: httpport
+  - port: web
     path: /monitoring/metrics
-  namespaceSelector:
-    matchNames:
-    - parivattam
