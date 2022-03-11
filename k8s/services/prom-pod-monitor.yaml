@@ -11,3 +11,7 @@ spec:
   podMetricsEndpoints:
   - port: web
     path: /monitoring/metrics
+    interval: 5s
+  namespaceSelector:
+    matchNames:
+      - parivattam
